@@ -2,7 +2,7 @@ from langchain.chains.conversation.base import ConversationChain
 from langchain.memory import ConversationBufferMemory
 from langchain_community.chat_models import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from memory import model
+
 
 
 def get_chat_response(input,memory,openai_api_key,temperature):
