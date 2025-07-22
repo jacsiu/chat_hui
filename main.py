@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit import sidebar
 
-from memory import prompt
+
 from utils import get_chat_response
 from langchain.memory import ConversationBufferMemory
 
