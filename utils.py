@@ -15,7 +15,7 @@ def get_chat_response(input,memory,openai_api_key,temperature):
         MessagesPlaceholder(variable_name="history"),
         ("human", "{input}")
     ])
-    model = ChatOpenAI(model="google/gemma-3-27b-it",base_url="https://live.staticflickr.com/3851/14825276609_098cac593d_b.jpg",openai_api_key=openai_api_key,temperature=temperature)
+    model = ChatOpenAI(model="deepseek/deepseek-chat-v3-0324",base_url="https://openrouter.ai/api/v1",openai_api_key=openai_api_key,temperature=temperature)
     chain = ConversationChain(llm=model,memory=memory,prompt=prompt)
     response = chain.invoke({"input":input})
     return response["response"]
