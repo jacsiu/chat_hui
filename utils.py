@@ -15,11 +15,11 @@ def get_chat_response(input,memory,openai_api_key,temperature):
         MessagesPlaceholder(variable_name="history"),
         ("human", "{input}")
     ])
-    model = ChatOpenAI(model="google/gemma-3-27b-it:free",base_url="https://openrouter.ai/api/v1",openai_api_key=openai_api_key,temperature=temperature)
+    model = ChatOpenAI(model="google/gemma-3-27b-it",base_url="https://live.staticflickr.com/3851/14825276609_098cac593d_b.jpg",openai_api_key=openai_api_key,temperature=temperature)
     chain = ConversationChain(llm=model,memory=memory,prompt=prompt)
     response = chain.invoke({"input":input})
     return response["response"]
 
-# memory = ConversationBufferMemory(return_messages=True)
-# print(get_chat_response("你好，我是陈，你是谁？",memory,"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"))
-# print(get_chat_response("我是谁？你想怎么称呼我",memory,"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"))
+   # memory = ConversationBufferMemory(return_messages=True)
+    # print(get_chat_response("你好，我是陈，你是谁？",memory,"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"))
+    # print(get_chat_response("我是谁？你想怎么称呼我",memory,"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"))
